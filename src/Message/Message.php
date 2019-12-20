@@ -16,7 +16,7 @@ class Message implements \Serializable
      */
     public function __construct($message = [], $source = '')
     {
-        if ($this->isJson($message)) {
+        if (is_string($message) && $this->isJson($message)) {
             $this->unserialize($message);
         } else {
             $this->message = [
@@ -93,14 +93,14 @@ class Message implements \Serializable
     function getSelfIp()
     {
         if (isset($_SERVER)) {
-            if ($_SERVER['SERVER_ADDR']) {
+            if (isset($_SERVER['SERVER_ADDR'])) {
                 $server_ip = $_SERVER['SERVER_ADDR'];
             } else {
-                $server_ip = $_SERVER['LOCAL_ADDR'];
+                $server_ip = $_SERVER['LOCAL_ADDR'] ?? '';
             }
         } else {
             $server_ip = getenv('SERVER_ADDR');
         }
-        return $server_ip;
+        return $server_ip ?: '127.0.0.1';
     }
 }
