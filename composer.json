@@ -1,0 +1,26 @@
+{
+    "name": "huangbin2018/dbmq",
+    "description": "DB实现简单的消息队列",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "MySQL MQ",
+        "MQ"
+    ],
+    "authors": [
+        {
+            "name": "黄滨",
+            "email": "huangbin2018@qq.com",
+	    "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "DBMQ\\": "src"
+        }
+    }
+}
