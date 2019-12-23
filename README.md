@@ -22,11 +22,11 @@ composer require huangbin2018/dbmq
 ```php
 // Mysql 连接配置
 $dbConfig = [
-    'user' => 'wms',
-    'password' => 'GtL4MBARrLsNxRZx',
-    'host' => '10.10.30.211',
+    'user' => 'root',
+    'password' => '',
+    'host' => '127.0.0.1',
     'port' => '3306',
-    'database' => 'wms',
+    'database' => 'test',
 ];
 $channel = 'test_channel';
 $tag = 'test_tag';
@@ -73,11 +73,11 @@ use DBMQ\Message\Response;
 
 // 数据库连接参数
 $dbConfig = [
-    'user' => 'wms',
-    'password' => 'GtL4MBARrLsNxRZx',
-    'host' => '10.10.30.211',
+    'user' => 'root',
+    'password' => '',
+    'host' => '127.0.0.1',
     'port' => '3306',
-    'database' => 'wms',
+    'database' => 'test',
 ];
 
 $channel = 'test_channel';
